@@ -5,7 +5,7 @@ components = {
   }
   mongodb         = {
     name          = "mongodb"
-    instance_type = "t3.micro"
+    instance_type = "t3,micro"
   }
   catalogue       = {
     name          = "catalogue"
@@ -27,16 +27,16 @@ components = {
     name          = "mysql"
     instance_type = "t3.micro"
   }
+  shipping        = {
+    name          = "shipping"
+    instance_type = "t3.micro"
+  }
   rabbitmq        = {
     name          = "rabbitmq"
     instance_type = "t3.micro"
   }
   payment         = {
     name          = "payment"
-    instance_type = "t3.micro"
-  }
-  shipping        = {
-    name          = "shipping"
     instance_type = "t3.micro"
   }
   dispatch        = {
@@ -47,4 +47,4 @@ components = {
 }
 security_groups = [ "sg-01d1ac98da4c430e4" ]
 
-zone_id = "Z09825891XTM08RW95ES0"
+ zone_id = "Z09825891XTM08RW95ES0"

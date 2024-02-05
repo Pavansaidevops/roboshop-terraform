@@ -5,7 +5,7 @@ components = {
   }
   mongodb         = {
     name          = "mongodb"
-    instance_type = "t3.small"
+    instance_type = "t3,micro"
   }
   catalogue       = {
     name          = "catalogue"
@@ -27,16 +27,16 @@ components = {
     name          = "mysql"
     instance_type = "t3.small"
   }
+  shipping        = {
+    name          = "shipping"
+    instance_type = "t3.small"
+  }
   rabbitmq        = {
     name          = "rabbitmq"
     instance_type = "t3.small"
   }
   payment         = {
     name          = "payment"
-    instance_type = "t3.small"
-  }
-  shipping        = {
-    name          = "shipping"
     instance_type = "t3.small"
   }
   dispatch        = {
