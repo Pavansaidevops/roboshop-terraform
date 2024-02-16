@@ -33,17 +33,25 @@ tags = {
 
 env = "dev"
 
-alb                 = {
-  public            = {
+alb  = {
+  public  = {
     internal        = false
     lb_type         = "application"
     sg_ingress_cidr = ["0.0.0.0/0"]
     sg_port         = 80
   }
-  private           = {
+  private = {
     internal        = true
     lb_type         = "application"
     sg_ingress_cidr = ["172.31.0.0/16", "10.0.0.0/16"]
     sg_port         = 80
+  }
+}
+
+docdb = {
+  main = {
+    backup_retention_period = 5
+    preferred_backup_window = "07:00-09:00"
+    skip_final_snapshot     = true
   }
 }
