@@ -81,6 +81,7 @@ module "elasticache" {
 module "rabbitmq" {
   source                      = "git::https://github.com/Pavansaidevops/tf-module-rabbitmq.git"
   for_each                    = var.rabbitmq
+  zone_id                     = var.zone_id
   subnet_ids                  = local.db_subnets
   vpc_id                      = local.vpc_id
   sg_ingress_cidr             = local.app_subnets_cidr
