@@ -35,6 +35,8 @@ module "docdb" {
   sg_ingress_cidr             = local.app_subnets_cidr
   engine_version              = each.value["engine_version"]
   engine_family               = each.value["engine_family"]
+  instance_count              = each.value["instance_count"]
+  instance_class              = each.value["instance_class"]
   tags                        = var.tags
   env                         = var.env
 }
