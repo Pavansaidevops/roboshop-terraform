@@ -105,6 +105,7 @@ module "app" {
   desired_capacity            = each.value["desired_capacity"]
   max_size                    = each.value["max_size"]
   min_size                    = each.value["min_size"]
+  alb_name                    = lookup(lookup(lookup(module.alb, "private", null), "alb" , null), "dns_name", null)
   tags                        = var.tags
   env                         = var.env
 }
