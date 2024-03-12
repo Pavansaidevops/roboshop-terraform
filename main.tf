@@ -106,6 +106,7 @@ module "app" {
   max_size                    = each.value["max_size"]
   min_size                    = each.value["min_size"]
   lb_priority                 = each.value["lb_priority"]
+  parameters                  = each.value[parameters]
   default_vpc_id              = var.default_vpc_id
   private_alb_name            = lookup(lookup(lookup(module.alb, "private", null), "alb", null), "dns_name", null)
   public_alb_name             = lookup(lookup(lookup(module.alb, "public", null), "alb", null), "dns_name", null)
